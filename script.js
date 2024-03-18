@@ -4,6 +4,7 @@ document.getElementById('preinscription-form').addEventListener('submit', functi
   let price = document.querySelector('input[name="price"]:checked').value;
   let payment = document.getElementById('payment').value;
   let message = `Préinscription à la session : ${session}\nPrix : ${price} FCFA\nMoyen de paiement : ${payment}`;
-  let whatsappLink = `https://wa.me/message/DJNWKADUL744A1/?text=${encodeURIComponent(message)}`;
-  window.location.href = whatsappLink;
+  let encodedMessage = encodeURIComponent(message);
+  let whatsappLink = `https://api.whatsapp.com/send?phone=22601368949&text=${encodedMessage}`;
+  window.open(whatsappLink, '_blank');
 });
