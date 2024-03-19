@@ -38,3 +38,17 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+#price-section {
+  margin-bottom: 15px;
+}
+
+#price-section label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#price-section div {
+  margin-bottom: 10px;
+}
